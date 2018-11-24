@@ -1,14 +1,26 @@
+<<<<<<< HEAD
 current directory: /var/www/html/RubyOnRails/RubyOnRails/vendor/bundle/ruby/2.5.0/gems/puma-3.12.0/ext/puma_http11
 /usr/share/rvm/rubies/ruby-2.5.3/bin/ruby -r ./siteconf20181124-3680-1p9phy6.rb extconf.rb
+=======
+current directory: /var/www/html/RubyOnRails/ruby1/vendor/bundle/ruby/2.5.0/gems/puma-3.12.0/ext/puma_http11
+/usr/share/rvm/rubies/ruby-2.5.3/bin/ruby -r ./siteconf20181120-874-snuql9.rb extconf.rb
+>>>>>>> 865dd5b988ef1214d7ea49de90577e5e53344d48
 checking for BIO_read() in -lcrypto... yes
 checking for SSL_CTX_new() in -lssl... yes
 checking for openssl/bio.h... yes
 creating Makefile
 
+<<<<<<< HEAD
 current directory: /var/www/html/RubyOnRails/RubyOnRails/vendor/bundle/ruby/2.5.0/gems/puma-3.12.0/ext/puma_http11
 make "DESTDIR=" clean
 
 current directory: /var/www/html/RubyOnRails/RubyOnRails/vendor/bundle/ruby/2.5.0/gems/puma-3.12.0/ext/puma_http11
+=======
+current directory: /var/www/html/RubyOnRails/ruby1/vendor/bundle/ruby/2.5.0/gems/puma-3.12.0/ext/puma_http11
+make "DESTDIR=" clean
+
+current directory: /var/www/html/RubyOnRails/ruby1/vendor/bundle/ruby/2.5.0/gems/puma-3.12.0/ext/puma_http11
+>>>>>>> 865dd5b988ef1214d7ea49de90577e5e53344d48
 make "DESTDIR="
 compiling http11_parser.c
 compiling io_buffer.c
@@ -38,6 +50,12 @@ cc1: warning: unrecognized command line option ‘-Wno-tautological-compare’
 compiling puma_http11.c
 linking shared-object puma/puma_http11.so
 
+<<<<<<< HEAD
 current directory: /var/www/html/RubyOnRails/RubyOnRails/vendor/bundle/ruby/2.5.0/gems/puma-3.12.0/ext/puma_http11
 make "DESTDIR=" install
 /usr/bin/install -m 0755 puma_http11.so ./.gem.20181124-3680-a3j7xl/puma
+=======
+current directory: /var/www/html/RubyOnRails/ruby1/vendor/bundle/ruby/2.5.0/gems/puma-3.12.0/ext/puma_http11
+make "DESTDIR=" install
+/usr/bin/install -m 0755 puma_http11.so ./.gem.20181120-874-mtfc7f/puma
+>>>>>>> 865dd5b988ef1214d7ea49de90577e5e53344d48

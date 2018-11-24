@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 current directory: /var/www/html/RubyOnRails/RubyOnRails/vendor/bundle/ruby/2.5.0/gems/nio4r-2.3.1/ext/nio4r
 /usr/share/rvm/rubies/ruby-2.5.3/bin/ruby -r ./siteconf20181124-3680-1np9dqy.rb extconf.rb
+=======
+current directory: /var/www/html/RubyOnRails/ruby1/vendor/bundle/ruby/2.5.0/gems/nio4r-2.3.1/ext/nio4r
+/usr/share/rvm/rubies/ruby-2.5.3/bin/ruby -r ./siteconf20181120-874-hvvv2i.rb extconf.rb
+>>>>>>> 865dd5b988ef1214d7ea49de90577e5e53344d48
 checking for unistd.h... yes
 checking for sys/select.h... yes
 checking for port_event_t in poll.h... no
@@ -9,10 +14,17 @@ checking for port_event_t in port.h... no
 checking for sys/resource.h... yes
 creating Makefile
 
+<<<<<<< HEAD
 current directory: /var/www/html/RubyOnRails/RubyOnRails/vendor/bundle/ruby/2.5.0/gems/nio4r-2.3.1/ext/nio4r
 make "DESTDIR=" clean
 
 current directory: /var/www/html/RubyOnRails/RubyOnRails/vendor/bundle/ruby/2.5.0/gems/nio4r-2.3.1/ext/nio4r
+=======
+current directory: /var/www/html/RubyOnRails/ruby1/vendor/bundle/ruby/2.5.0/gems/nio4r-2.3.1/ext/nio4r
+make "DESTDIR=" clean
+
+current directory: /var/www/html/RubyOnRails/ruby1/vendor/bundle/ruby/2.5.0/gems/nio4r-2.3.1/ext/nio4r
+>>>>>>> 865dd5b988ef1214d7ea49de90577e5e53344d48
 make "DESTDIR="
 compiling bytebuffer.c
 compiling monitor.c
@@ -212,6 +224,12 @@ cc1: warning: unrecognized command line option ‘-Wno-parentheses-equality’
 cc1: warning: unrecognized command line option ‘-Wno-tautological-compare’
 linking shared-object nio4r_ext.so
 
+<<<<<<< HEAD
 current directory: /var/www/html/RubyOnRails/RubyOnRails/vendor/bundle/ruby/2.5.0/gems/nio4r-2.3.1/ext/nio4r
 make "DESTDIR=" install
 /usr/bin/install -m 0755 nio4r_ext.so ./.gem.20181124-3680-3r2are
+=======
+current directory: /var/www/html/RubyOnRails/ruby1/vendor/bundle/ruby/2.5.0/gems/nio4r-2.3.1/ext/nio4r
+make "DESTDIR=" install
+/usr/bin/install -m 0755 nio4r_ext.so ./.gem.20181120-874-17fthpo
+>>>>>>> 865dd5b988ef1214d7ea49de90577e5e53344d48

@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 865dd5b988ef1214d7ea49de90577e5e53344d48
 # README
 
 This README would normally document whatever steps are necessary to get the
@@ -22,3 +27,12 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+<<<<<<< HEAD
+=======
+=======
+# sample_app_rails_5
+>>>>>>> e360996800d434ceda174933517483e67a8ae9bb
+=======
+# Rails-Assignments
+>>>>>>> e242d4193c76bc18f4276aa1b77b5b338f85992f
+>>>>>>> 865dd5b988ef1214d7ea49de90577e5e53344d48
