@@ -1,0 +1,224 @@
+		/* NavBar Header styles */
+
+		body{
+			padding: 0; 
+			margin: 0;
+			background-color: #339966;
+			}
+
+		
+		.header{
+			background-color: #adad85;
+			padding: 20px 0;
+			width: 100%;
+		}
+
+		.header img{
+			position: relative;
+			border-radius: 50%;
+			top: 20px;
+		}
+		.header h1{
+			position: relative;
+			top: 0px;
+			font-size: 50px;
+			color:  #006bb3;
+			left: 150px;
+
+		}
+		.nav{
+			position: sticky;
+			top: 0;
+			float: left;
+			padding: 10px 0;
+			background-color: black;
+			width: 100%;
+			display: inline-block;
+		}
+		nav li{  
+			display: inline-block;
+			color: white;
+			
+		}
+		nav li a{
+			position: relative;
+			top: 8px;
+			text-decoration: none;
+			color: white;
+			padding: 20px 25px;
+			align-content: center;
+		}
+
+		nav li a:hover{
+			background-color:  #adad85;
+			color: black;
+		}
+		
+		.search{
+			position: relative;
+			float: right;
+		}
+		.search .search-input{
+			position: relative;
+			padding: 10px;
+			border-radius: 10px;
+			top: 0;
+			right: 50px;
+			outline: none;
+			border: none;
+			margin: 0;
+		}
+
+		.search .search-input:hover{
+			background-color: #adad85;
+		}
+		.search .search-btn{
+			position: relative;
+			padding: 10px;
+			border-radius: 10px;
+			top: 0;
+			right: 50px;
+			outline: none;
+			border: none;
+			margin: 0;
+			background-color: #61dafb;
+		}
+		.search .search-btn:hover{
+			cursor: pointer;
+		}
+
+
+		/*index/home sttles */
+
+		.data{
+			font:bold 20px sans-serif;
+		}
+		.data h1{
+			padding: 50px 0 0 10px;
+		}
+
+		body .data{
+			background-repeat:cover;
+			padding: 0 0 0 0;
+
+		}
+
+		body p{
+			padding: 0 0 0 10px;
+		}
+
+		.Our-Team{
+			padding: 0 0 0 15px;
+		}
+
+		.Our-Team .column{
+			float: left;
+			width: 25%
+		}
+
+		.Email{
+			border-radius: 5px;
+			height: 35px;
+		}
+
+		.textarea{
+			border-radius: 5px;
+			height: 135px;
+		}
+		.form-btn{
+			background-color: black;
+			color: white;
+			outline: none;
+			border-radius: 5px;
+			padding: 10px;
+		}
+
+		/*Services page styles*/
+
+		.Services-body{
+			background: url("back.png");
+			background-repeat: cover;
+			padding: 0 0 50px 0;
+		}
+
+		.Services-body{
+			font:bold 20px sans-serif;
+		}
+		.Services-body h1{
+			padding: 50px 0 10px 15px;
+		}
+		body p{
+			padding: 0 0 0 20px;
+		}
+		
+		.Services-body li{
+			padding: 0 0 0 20px;
+		}
+		.Services-body li a{
+			text-decoration: none;
+			color: white;
+		}
+		.Services-body li a:hover{
+			color: black;
+		}
+
+		/*ContactUs page styles*/
+
+
+		.contactUs-body{
+			font:bold 20px sans-serif;
+		}
+
+		.contactUs-body input{
+			border-radius: 10px;
+			border: 2px solid black;
+			height: 45px;
+			text-indent: 15px;
+		}
+
+		.contactUs-form h1{
+			padding: 50px 0 10px 0;
+		}
+		
+		.contactUs-body textarea{
+			border-radius: 5px;
+			border: 2px solid black;
+			width: 500px;
+			text-indent: 15px;	
+		}
+
+		.contactUs-body .button{
+			background-color: #61dafb;
+			color: black;
+			border-radius: 5px;
+			height: 40px;
+			width: 100px;
+			border:none;
+		}
+
+		/* footer styles */
+
+		.footer{
+		position: sticky;
+		bottom: 0;
+		padding: 10px 0px 10px 0px;
+		background-color: black;
+		color: white;
+		width: 100%;
+		}
+
+		footer h1{
+			color: #006bb3;
+		}
+		footer ul li{
+			display: inline-block;
+		}
+
+		footer ul li a{
+
+			text-decoration: none;
+			color: white;
+			padding: 10px;
+			align-self: center;
+		}
+		

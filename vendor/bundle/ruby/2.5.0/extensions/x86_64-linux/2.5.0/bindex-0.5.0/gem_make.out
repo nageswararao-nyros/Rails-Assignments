@@ -1,0 +1,15 @@
+current directory: /var/www/html/RubyOnRails/RubyOnRails/vendor/bundle/ruby/2.5.0/gems/bindex-0.5.0/ext/bindex
+/usr/share/rvm/rubies/ruby-2.5.3/bin/ruby -r ./siteconf20181124-3680-gr4ucn.rb extconf.rb
+creating Makefile
+
+current directory: /var/www/html/RubyOnRails/RubyOnRails/vendor/bundle/ruby/2.5.0/gems/bindex-0.5.0/ext/bindex
+make "DESTDIR=" clean
+
+current directory: /var/www/html/RubyOnRails/RubyOnRails/vendor/bundle/ruby/2.5.0/gems/bindex-0.5.0/ext/bindex
+make "DESTDIR="
+compiling cruby.c
+linking shared-object bindex/cruby.so
+
+current directory: /var/www/html/RubyOnRails/RubyOnRails/vendor/bundle/ruby/2.5.0/gems/bindex-0.5.0/ext/bindex
+make "DESTDIR=" install
+/usr/bin/install -m 0755 cruby.so ./.gem.20181124-3680-1g0d4rk/bindex
