@@ -1,9 +1,6 @@
 {
-<<<<<<< HEAD
   "name": "RubyOnRails",
-=======
   "name": "ruby1",
->>>>>>> 865dd5b988ef1214d7ea49de90577e5e53344d48
   "private": true,
   "dependencies": {}
 }

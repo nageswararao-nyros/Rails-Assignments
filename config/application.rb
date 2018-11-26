@@ -6,11 +6,8 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
-<<<<<<< HEAD
 module RubyOnRails
-=======
-module Ruby1
->>>>>>> 865dd5b988ef1214d7ea49de90577e5e53344d48
+	
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.2
@@ -21,3 +18,4 @@ module Ruby1
     # the framework and any gems in your application.
   end
 end
+

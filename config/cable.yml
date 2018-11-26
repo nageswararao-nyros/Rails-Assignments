@@ -7,8 +7,8 @@ test:
 production:
   adapter: redis
   url: <%= ENV.fetch("REDIS_URL") { "redis://localhost:6379/1" } %>
-<<<<<<< HEAD
+
   channel_prefix: RubyOnRails_production
-=======
+
   channel_prefix: ruby1_production
->>>>>>> 865dd5b988ef1214d7ea49de90577e5e53344d48
+
