@@ -1,0 +1,36 @@
+	<div class="container">
+		<h1 align="center"><%= @article.title %></h1>
+
+		<table class="table table-bordered bg-light">
+
+			<tr>
+				<td>
+					Author Name
+				</td>
+
+				<td>
+					<%= @article.authorname %>	
+				</td>
+
+			</tr>
+
+			<tr>
+				<td>
+					Category
+				</td>
+
+				<td>
+					<%= @article.category %>	
+				</td>
+
+			</tr>
+
+			<tr>
+				<td colspan="2">
+					<%= @article.story %>
+				</td>
+			</tr>
+			
+		</table>
+		<%= link_to 'Back', articles_path , {:class=>'btn btn-warning'} %>
+	</div>

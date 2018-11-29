@@ -1,0 +1,61 @@
+   
+   body{
+      background-color: #e8ebf2;
+   }
+   
+   .article-align{
+      padding-top: 7px;
+      padding-bottom: 5px;
+      padding-left: 10px;
+
+   }
+
+   .list-align{
+      margin-top: 2px;
+   }
+
+   .listTable-align{
+
+      padding: 2px 10px 20px 10px;
+
+   }
+
+   .btn-success{
+      background-color: #339966;
+   }
+
+   .btn-warning{
+      color: white;
+   }
+
+   .form-align{
+      background-color: white;
+      width: 400px;
+
+   }
+
+   .formHeader-align{
+
+      padding-top: 10px;
+      padding-left: 10px;
+
+   }
+
+   .formContent-align{
+      margin-top: 2px;
+      padding: 20px;
+
+   }
+
+  .select-custom{
+
+      height: 50px;
+
+  }
+
+  #modal-dialog{
+   background-color: white;
+
+  }
+
+   
