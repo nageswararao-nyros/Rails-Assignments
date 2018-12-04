@@ -12,12 +12,11 @@
         <div class="bg-white"><div align="left" class="article-align"><%= link_to 'New article', new_article_path,{:class=>'btn btn-success'} %></div>
 
         <div align="center" class="listTable-align">
-          <table class="table table-bordered bg-light table-sm">
+          <table class="table table-stripped  bg-light">
             <tr>
               <th>Title</th>
               <th>Story</th>
               <th>Author name</th>
-              <th>Category</th>
               <th colspan="3">Actions</th>
             </tr>
 
@@ -25,16 +24,15 @@
             <tr>
               <td><%= article.title %></td>
               <td><%= article.story %></td>
-              <td><%= article.authorname %></td>
-              <td><%= article.category %></td>
+              <td><%= article.author.name %></td>
               <td>
 
-               <%= link_to 'View', article_path(article),{:class=>'btn btn-success'} %>
+               <%= link_to 'View', article_path(article),{:class=>'btn btn-success btn-sm'} %>
 
-               <%= link_to 'Edit', edit_article_path(article),{:class=>'btn btn-warning'} %>
+               <%= link_to 'Edit', edit_article_path(article),{:class=>'btn btn-warning btn-sm'} %>
 
 
-               <%= link_to 'Delete', '#',{:class=>"btn btn-danger", "data-toggle"=>"modal", "data-target" => "#delete-#{article.id}"} %>
+               <%= link_to 'Delete', '#',{:class=>"btn btn-danger btn-sm", "data-toggle"=>"modal", "data-target" => "#delete-#{article.id}"} %>
 
 
                <div class="modal fade" id="delete-<%= article.id %>">
@@ -49,8 +47,8 @@
                     <p>Are you sure to delete this article?</p>
                   </div>
                   <div class="modal-footer">
-                    <%= link_to 'Delete', article_path(article), method: :delete, :class => 'btn btn-danger' %>
-                    <%= link_to 'Cancel', articles_path,{:class=>'btn btn-warning'} %>
+                    <%= link_to 'Delete', article_path(article), method: :delete, :class => 'btn btn-danger btn-sm' %>
+                    <%= link_to 'Cancel', articles_path,{:class=>'btn btn-warning btn-sm'} %>
                   </div>
                 </div>
               </div>

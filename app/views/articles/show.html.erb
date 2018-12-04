@@ -9,27 +9,18 @@
 				</td>
 
 				<td>
-					<%= @article.authorname %>	
+					<%= @article.author_id %>	
 				</td>
 
-			</tr>
-
-			<tr>
-				<td>
-					Category
-				</td>
-
-				<td>
-					<%= @article.category %>	
-				</td>
-
-			</tr>
+			</tr>	
 
 			<tr>
 				<td colspan="2">
 					<%= @article.story %>
 				</td>
 			</tr>
+
+			
 			
 		</table>
 		<%= link_to 'Back', articles_path , {:class=>'btn btn-warning'} %>

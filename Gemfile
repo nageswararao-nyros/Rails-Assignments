@@ -40,6 +40,7 @@ gem 'bootstrap', '~> 4.0'
 
 gem 'jquery-rails', '~> 4.3', '>= 4.3.3'
 
+gem 'hirb', '~> 0.7.3'
 
 
 

@@ -17,7 +17,9 @@ class ArticlesController < ApplicationController
   end
  
   def create
+
     @article = Article.new(article_params)
+
  
     if @article.save
       redirect_to @article
@@ -45,6 +47,6 @@ class ArticlesController < ApplicationController
  
   private
     def article_params
-      params.require(:article).permit(:title, :story, :authorname, :category)
+      params.require(:article).permit(:title, :story, :author_id)
     end
 end

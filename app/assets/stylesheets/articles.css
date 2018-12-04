@@ -20,14 +20,6 @@
 
    }
 
-   .btn-success{
-      background-color: #339966;
-   }
-
-   .btn-warning{
-      color: white;
-   }
-
    .form-align{
       background-color: white;
       width: 400px;
@@ -47,15 +39,5 @@
 
    }
 
-  .select-custom{
-
-      height: 50px;
-
-  }
-
-  #modal-dialog{
-   background-color: white;
-
-  }
-
+  
    
