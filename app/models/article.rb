@@ -8,5 +8,40 @@ class Article < ApplicationRecord
 
    belongs_to :author, required: false
 
-   
+   after_create :article_publishing 
+
+  after_update :article_update
+
+	private
+
+	   def article_publishing
+
+
+	   	puts "DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD"
+	   
+
+	     self.status = "success"
+
+	     self.save!
+	    	
+	
+
+	   end 
+
+	   def article_update
+
+
+	   	puts "DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD"
+	   
+
+	     self.status = "latest updated"
+
+	     self.save!
+	    	
+	
+
+	   end 
+
+	   
+
 end
