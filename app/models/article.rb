@@ -6,39 +6,31 @@ class Article < ApplicationRecord
 
     validates :title, uniqueness: true, length:{in:6..20}
 
-   belongs_to :author, required: false
+    belongs_to :author, required: false
 
-   after_create :article_publishing 
+    after_create :article_publishing 
 
-  after_update :article_update
+    after_update :article_update
+
+    has_and_belongs_to_many :reviews
 
 	private
 
 	   def article_publishing
 
-
-	   	puts "DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD"
+		puts "DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD"
 	   
+	    self.status = "success"
 
-	     self.status = "success"
-
-	     self.save!
-	    	
-	
-
+	    self.save!
+	   
 	   end 
 
 	   def article_update
 
-
 	   	puts "DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD"
 	   
-
-	     self.status = "latest updated"
-
-	     self.save!
-	    	
-	
+		self.status = "latestly updated"
 
 	   end 
 

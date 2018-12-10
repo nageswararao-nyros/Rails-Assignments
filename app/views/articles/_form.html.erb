@@ -20,7 +20,6 @@
 						<div align="left" class="text-danger"><%= form.label @article.errors.messages[:story].first if @article.errors.messages[:story].any? %></div>
 					</div>
 					<div class="form-group">
-						<p><%= @article.author_id%></p>
 						<div align="left"><%= form.label :author %></div>
 						<%= form.select :author_id, Author.all.pluck(:name, :id), { prompt: 'Select' }, { class: "form-control" } %>
 						<div align="left" class="text-danger"><%= form.label @article.errors.messages[:author_id].first if @article.errors.messages[:author_id].any? %></div>
