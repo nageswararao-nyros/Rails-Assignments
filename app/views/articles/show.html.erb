@@ -2,8 +2,7 @@
 		<h1 align="center"><%= @article.title %></h1>
 
 		<table class="table table-bordered bg-light">
-
-			<tr>
+    	<tr>
 				<td>
 					Author Name
 				</td>
@@ -18,11 +17,7 @@
 				<td colspan="2">
 					<%= @article.story %>
 				</td>
-			</tr>
-
-			
-			
-			
+			</tr>		
 		</table>
 		<%= link_to 'Back', articles_path , {:class=>'btn btn-warning'} %>
 	</div>
