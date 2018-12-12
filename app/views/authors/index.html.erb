@@ -1,0 +1,20 @@
+<table class="table table-bordered table-sm">
+  <tr>
+    <th>
+      Author Name
+    </th>
+    <th>
+      Author Nationality
+    </th>
+  </tr>
+  <%= Author.find_each do |author| %>
+    <tr>
+      <td>
+        <%= link_to author.name, author_path(author),{:class=>'btn btn-success btn-sm'} %>  
+      </td>
+      <td>
+        <%= author.nationality%>
+      </td>
+    </tr>
+  <% end %> 
+</table>

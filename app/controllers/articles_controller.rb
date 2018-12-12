@@ -2,6 +2,14 @@ class ArticlesController < ApplicationController
 
   def index
     @articles = Article.all
+     @articles_query = if params[:term]
+      Article.where('title LIKE ?',"%#{params[:term]}")
+      else if params[:term1]
+        Article.where('author_id LIKE ?',"%#{params[:term1]}")
+      else
+        Article.all
+      end
+    end
   end
  
   def show
