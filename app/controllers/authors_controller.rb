@@ -1,16 +1,14 @@
 class AuthorsController < ApplicationController
   def index
-    @authors = Author.all
-    @authors = Author.where(nationality:"Russia")
-    
-  end
-  def show
-    @author = Author.where("id = ?", params[:id])
-    @authors_nationalities_not = Author.where.not(nationality:"American")
-    @authors_nationalities_or = Article.where(title:"HelloNamasthe") .or(Article.where(story:"Welcome to Vizag")) 
+    @authors = Author.select(:nationality_id).distinct
+    @authors_count = Author.count(:nationality_id) 
+    @author_join = Article.joins(:author)
+    @authors_eager = Article.all.includes(:author).where(authors: {name: params[:both]})
+    @author_scope = Author.grade.nationality_id
+    @author_max_story = Article.where(["LENGTH(story)>17"])
   end
   private
-    def article_params
-      params.require(:author).permit(:id, :nationality, :name)
+    def author_params
+      params.require(:author).permit(:title, :name, :nationality, :story)
     end
 end

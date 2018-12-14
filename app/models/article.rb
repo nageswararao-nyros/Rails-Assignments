@@ -3,9 +3,10 @@ class Article < ApplicationRecord
   validates :author_id, presence: true
   validates :title,  length:{in:6..20}
   belongs_to :author, required: false
+  has_and_belongs_to_many :reviews
   after_create :article_publishing 
   after_update :article_update
-  has_and_belongs_to_many :reviews
+  
 
 	private
 	  def article_publishing

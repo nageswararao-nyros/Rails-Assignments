@@ -1,20 +1,83 @@
-<table class="table table-bordered table-sm">
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <table>
+        <tr>
+          <th>Author Nationality</th>
+        </tr>
+        <%= @authors.each do |author| %>
+        <tr>
+          <td><%= author.nationality.country %></td>
+        </tr>
+        <% end %>
+      </table>
+    </div>
+     <div class="col-md-6">
+      <table>
+        <tr>
+          <th>Author Nationality</th>
+        </tr>
+        
+        <tr>
+          <td><%= @authors_count %></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- Selecting Specific Fields End -->
+<h1>Using Joins</h1>
+<table class="table table-bodered">
   <tr>
-    <th>
-      Author Name
-    </th>
-    <th>
-      Author Nationality
-    </th>
+    <th>Article Title</th>
+    <th>Article Story</th>
+    <th>Author Name</th>
+    <th>Author Nationality</th>
   </tr>
-  <%= Author.find_each do |author| %>
-    <tr>
-      <td>
-        <%= link_to author.name, author_path(author),{:class=>'btn btn-success btn-sm'} %>  
-      </td>
-      <td>
-        <%= author.nationality%>
-      </td>
-    </tr>
-  <% end %> 
+  <%= @author_join.find_each do |article_info| %>
+  <tr>
+    <td><%= article_info.title %></td>
+    <td><%= article_info.story %></td>
+    <td><%= article_info.author.name %></td>
+    <td><%= article_info.author.nationality.country %></td>
+  </tr>
+  <% end %>
+</table>
+
+<!--  Table Join end -->
+
+<hr>
+<h1>Using Scope Method</h1>
+<table class="table table-bodered">
+  <tr>
+    <th>Author Name</th>
+    <th>Author Grade</th>
+    <th>Author Nationality</th>
+  </tr>
+  <%= @author_scope.find_each do |article_info| %>
+  <tr>
+    <td><%= article_info.name %></td>
+    <td><%= article_info.grade %></td>
+    <td><%= article_info.nationality.country %></td>
+  </tr>
+  <% end %>
+</table>
+
+<!--  Scope Method end -->
+<hr>
+<h1>Using Calculations</h1>
+  <table class="table table-bodered">
+  <tr>
+    <th>Article Title</th>
+    <th>Article Story</th>
+    <th>Author Name</th>
+  </tr>
+  <%= @author_max_story.find_each do |max_story| %>
+  <tr>
+    <td><%= max_story.title %></td>
+    <td><%= max_story.story %></td>
+    <td><%= max_story.author.name %></td>
+  </tr>
+  <% end %>
 </table>
