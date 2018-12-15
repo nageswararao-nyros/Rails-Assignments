@@ -1,0 +1,25 @@
+.footer{
+    position: sticky;
+    bottom: 0;
+    padding: 10px 0px 10px 0px;
+    background-color: black;
+    color: white;
+    width: 100%;
+    }
+
+    footer h1{
+      color: #006bb3;
+    }
+    footer ul li{
+      display: inline-block;
+    }
+
+    footer ul li a{
+
+      text-decoration: none;
+      color: white;
+      padding: 10px;
+      align-self: center;
+    }
+  
+   

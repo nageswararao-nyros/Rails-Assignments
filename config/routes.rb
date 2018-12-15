@@ -6,4 +6,7 @@ Rails.application.routes.draw do
 
   resources :authors
   root 'authors#index'
+
+  get '/authors'=>"authors#index"
+  get '/articles'=>"articles#index"
 end
