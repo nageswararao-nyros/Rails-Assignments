@@ -42,6 +42,10 @@ gem 'jquery-rails', '~> 4.3', '>= 4.3.3'
 
 gem 'hirb', '~> 0.7.3'
 
+gem 'paperclip', '~> 6.1'
+
+gem 'mimemagic', '~> 0.3.0'
+
 
 
 group :development, :test do

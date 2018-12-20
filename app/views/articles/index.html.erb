@@ -44,6 +44,7 @@
               <th>Title</th>
               <th>Story</th>
               <th>Author name</th>
+              <th>Content</th>
               <th colspan="3">Actions</th>
             </tr>
 
@@ -52,6 +53,13 @@
               <td><%= article.title %></td>
               <td><%= article.story %></td>
               <td><%= article.author.name %></td>
+              <td align="center">
+                <% if article.poster_content_type == "application/pdf" %>
+                  <%= link_to "Download pdf", article.poster.url(:original, false), class:"btn btn-info" %>
+                <% else %>
+                  <%= image_tag article.poster.url, class:"image-size" %>
+                <% end %> 
+              </td>
               <td>
 
                <%= link_to 'View', article_path(article),{:class=>'btn btn-success btn-sm'} %>

@@ -4,13 +4,8 @@
 		<table class="table table-bordered bg-light">
     	<tr>
 				<td>
-					Author Name
+					<%= image_tag @article.poster.url, class:"image-size" %>
 				</td>
-
-				<td>
-					<%= @article.author_id %>	
-				</td>
-
 			</tr>	
 
 			<tr>

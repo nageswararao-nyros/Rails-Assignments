@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_12_14_102505) do
+ActiveRecord::Schema.define(version: 2018_12_19_084744) do
 
   create_table "articles", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "title"
@@ -19,6 +19,10 @@ ActiveRecord::Schema.define(version: 2018_12_14_102505) do
     t.datetime "updated_at", null: false
     t.integer "author_id"
     t.string "status"
+    t.string "poster_file_name"
+    t.string "poster_content_type"
+    t.integer "poster_file_size"
+    t.datetime "poster_updated_at"
   end
 
   create_table "articles_reviews", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
