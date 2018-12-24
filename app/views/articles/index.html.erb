@@ -3,7 +3,23 @@
     <div align="center">
       <div align="left" class="bg-white">
         <div class="article-align">
-          <h3 class="btn btn-primary"><b>Articles</b></h3>
+          <div class="row">
+            <div class="col-md-6">
+              <h3 class="btn btn-primary"><b>Articles</b></h3>
+            </div>
+            <div align="right" class="col-md-6">
+              <div class="dropdown">
+                <button class="btn btn-success dropdown-toggle" type="button" data-toggle="dropdown"><%= session[:user_name] %>
+                <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li><a href="/profile">Profile</a></li>
+                  <li>
+                    <a href="/logout">Logout</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <div class="list-align">
@@ -12,19 +28,26 @@
           <div class="col-sm-6">
             <div align="left" class="article-align"><%= link_to 'New article', new_article_path,{:class=>'btn btn-success'} %></div>
           </div>
-          <div class="article-align form-group">
-            <%= form_tag(articles_path,method: :get) do %>
-            <%= text_field_tag :term %>
-            <%= submit_tag 'search', class:"btn btn-info btn-sm" %>
-            <% end %>
-          </div>
-          <div class="article-align form-group">
-            <%= form_tag(articles_path,method: :get) do %>
-            <%= text_field_tag :author_name %>
-            <%= submit_tag 'search', class:"btn btn-info btn-sm" %>
-            <% end %>
-          </div>
-          <div class="article-align form-group">
+
+          <div class="row">
+            <div class="col-md-4">
+              <div class="article-align form-group">
+                <%= form_tag(articles_path,method: :get) do %>
+                <%= text_field_tag :term %>
+                <%= submit_tag 'search', class:"btn btn-info btn-sm" %>
+                <% end %>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="article-align form-group">
+                <%= form_tag(articles_path,method: :get) do %>
+                <%= text_field_tag :author_name %>
+                <%= submit_tag 'search', class:"btn btn-info btn-sm" %>
+                <% end %>
+              </div>
+            </div>
+            <div class="col-md-4">
+               <div class="article-align form-group">
             <div class="row">
               <div class="col-md-8">
                 <%= form_tag(articles_path,method: :get) do %>
@@ -35,7 +58,12 @@
                 <% end %>
               </div>
             </div> 
-          </div>    
+          </div>  
+            </div>
+          </div>
+          
+          
+           
         </div>
         <div class="bg-white">
         <div align="center" class="listTable-align">
@@ -48,7 +76,7 @@
               <th colspan="3">Actions</th>
             </tr>
 
-            <% @articles_query.each do |article| %>
+            <% @articles.each do |article| %>
             <tr>
               <td><%= article.title %></td>
               <td><%= article.story %></td>
@@ -72,23 +100,23 @@
 
                <div class="modal fade" id="delete-<%= article.id %>">
 
-                <div class="modal-dialog">
-                 <div class="modal-content">
-                  <div class="modal-header">
-                    <h3>Article Delete</h3>
-                  </div>
-                  <div class="modal-body">
-                    <p>Are you sure to delete this article?</p>
-                  </div>
-                  <div class="modal-footer">
-                    <%= link_to 'Delete', article_path(article), method: :delete, :class => 'btn btn-danger btn-sm' %>
-                    <%= link_to 'Cancel', articles_path,{:class=>'btn btn-warning btn-sm'} %>
+                  <div class="modal-dialog">
+                   <div class="modal-content">
+                    <div class="modal-header">
+                      <h3>Article Delete</h3>
+                    </div>
+                    <div class="modal-body">
+                      <p>Are you sure to delete this article?</p>
+                    </div>
+                    <div class="modal-footer">
+                      <%= link_to 'Delete', article_path(article), method: :delete, :class => 'btn btn-danger btn-sm' %>
+                      <%= link_to 'Cancel', articles_path,{:class=>'btn btn-warning btn-sm'} %>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          </td>
-        </tr>
+            </td>
+          </tr>
         <% end %>
       </table>
     </div>
