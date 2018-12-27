@@ -4,15 +4,15 @@ class ArticlesController < ApplicationController
 
   def index
     @articles = Article.all
-     @articles_query = if params[:term]
-      Article.where('title LIKE ?',"%#{params[:term]}")
-      elsif params[:term1]
-        Article.joins(:author).where('nationality_id LIKE ?',"%#{params[:term1]}")
-      elsif params[:author_name]
-        Article.all.includes(:author).where(authors: {name: params[:author_name]})
-      else
-        Article.all
-  	 end
+    @articles_query = if params[:term]
+    Article.where('title LIKE ?',"%#{params[:term]}")
+    elsif params[:term1]
+      Article.joins(:author).where('nationality_id LIKE ?',"%#{params[:term1]}")
+    elsif params[:author_name]
+      Article.all.includes(:author).where(authors: {name: params[:author_name]})
+    else
+      Article.all
+    end
   end
  
   def show
