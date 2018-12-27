@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  root 'sessions#create', as: 'index'
+
+  root 'sessions#create'
 
   get 'admin' => 'admin#index'
   get 'logout' => 'sessions#destroy'
@@ -13,6 +14,9 @@ Rails.application.routes.draw do
   get 'signup'=>'users#new'
   get "sessions/create"
   get "sessions/destroy"
+
+  get "articles/download_file"
+  get "articles/download_pdf"
 
   get "search/index"
   post "search/index"

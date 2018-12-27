@@ -1,5 +1,7 @@
 class ArticlesController < ApplicationController
 
+  require 'prawn'
+
   def index
     @articles = Article.all
      @articles_query = if params[:term]
@@ -15,6 +17,14 @@ class ArticlesController < ApplicationController
  
   def show
     @article = Article.find(params[:id])
+    respond_to do |format|
+      format.html
+      format.pdf do
+        send_data generate_pdf(@article), 
+        filename: "#{@article.title}.pdf",
+        type: "application/pdf"
+      end
+    end
   end
  
   def new
@@ -48,12 +58,33 @@ class ArticlesController < ApplicationController
   def destroy
     @article = Article.find(params[:id])
     @article.destroy
- 
     redirect_to articles_path
+  end
+
+  def download_pdf
+    article = Article.find_by(id: params[:id])
+    send_data generate_pdf(article),
+      filename: "#{article.title}.pdf",
+      type: "application/pdf"
+  end
+
+  def download_file
+    article = Article.find(params[:id])
+    send_file("#{Rails.root}/public/system/articles/posters/000/000/0#{article.id}/original/#{article.id}.pdf",
+      filename: "#{article.title}.pdf",
+      type: "application/pdf")
   end
  
   private
     def article_params
-      params.require(:article).permit(:title, :story, :author_id, :poster)
+      params.require(:article).permit(:title, :story, :author_id, :poster, :id)
+    end
+
+    def generate_pdf(article)
+      Prawn::Document.new do
+        text "Title: \#{#{article.title}", align: :center
+        text "Story: #{article.story}"
+        text "Authorname: #{article.author.name}"
+      end.render
     end
 end
