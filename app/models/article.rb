@@ -15,8 +15,9 @@ class Article < ApplicationRecord
   has_attached_file :poster
   
   # Associations Start
-  belongs_to :author, required: false
+  belongs_to :author
   has_and_belongs_to_many :reviews
+  has_many :comments
 
   # Callbacks Start
   after_create :article_publishing 

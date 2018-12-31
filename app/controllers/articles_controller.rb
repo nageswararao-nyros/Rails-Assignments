@@ -1,7 +1,5 @@
 class ArticlesController < ApplicationController
 
-  require 'prawn'
-
   def index
     @articles = Article.all
      @articles_query = if params[:term]
@@ -70,11 +68,12 @@ class ArticlesController < ApplicationController
 
   def download_file
     article = Article.find(params[:id])
+    puts "SSSSSSSSSSSSSSSSSSSS.....@@@@@@@@@2"
     send_file("#{Rails.root}/public/system/articles/posters/000/000/0#{article.id}/original/#{article.id}.pdf",
       filename: "#{article.title}.pdf",
       type: "application/pdf")
   end
- 
+
   private
     def article_params
       params.require(:article).permit(:title, :story, :author_id, :poster, :id)

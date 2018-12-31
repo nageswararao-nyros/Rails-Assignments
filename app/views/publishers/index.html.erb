@@ -1,0 +1,21 @@
+<h1>Publishers#index</h1>
+<p>Find me in app/views/publishers/index.html.erb</p>
+<%= link_to 'New Publisher', "publisher/new", class:"btn btn-info" %>
+<table class="table table-sm table-bordered">
+  <tr>
+    <th>Name of Publisher</th>
+    <th>From</th>
+    <th>Actions</th>
+  </tr>
+  <% @publishers.each do |publisher| %>
+  <tr>
+    <td><%= publisher.name %></td>
+    <td><%= publisher.from %></td>
+    <td colspan="3">
+      <%= link_to "view", publisher_path(publisher), :class=> "btn btn-success" %>
+      <%= link_to 'Edit', edit_publisher_path(publisher),:class => "btn btn-warning" %>
+      <%= link_to 'Delete', publisher_path(publisher), method: :delete, :class => "btn btn-danger" %>
+    </td>
+  </tr>
+  <% end %>
+</table>

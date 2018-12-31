@@ -16,6 +16,9 @@
                   <li>
                     <a href="/logout">Logout</a>
                   </li>
+                  <li>
+                    <a href="/feedback">Feedback</a>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -96,7 +99,9 @@
 
                <%= link_to 'Download',{:controller => "articles", :action => "download_pdf", :id => article.id},:class=>"btn btn-sm btn-primary", :target=>"_blank" %>
 
-               <%= link_to 'Download1',{:controller => "articles", :action => "download_file", :id => article.id},:class=>"btn btn-sm btn-info", :target=>"_blank" %>
+               <%= link_to 'Comment', article_comments_path(article),:class=>"btn btn-sm btn-primary", :target=>"_blank" %>
+
+               <%= link_to 'Publishers','publishers',:class=>"btn btn-sm btn-info", :target=>"_blank" %>
 
 
                <%= link_to 'Delete', '#',{:class=>"btn btn-danger btn-sm", "data-toggle"=>"modal", "data-target" => "#delete-#{article.id}"} %>
