@@ -13,9 +13,16 @@
 					<div class="form-group">
 						<div align="left"><%= form.label :title %></div>
 						<%= form.text_field :title , {:class=>"form-control"} %>
-						<div align="left" class="text-danger"><%= form.label @article.errors.messages[:story].first if @article.errors.messages[:title].any? %>    
+						<div align="left" class="text-danger"><%= form.label @article.errors.messages[:title].first if @article.errors.messages[:title].any? %>    
             </div>
 					</div>
+
+          <div class="form-group">
+            <div align="left"><%= form.label :email %></div>
+            <%= form.text_field :email , {:class=>"form-control"} %>
+            <div align="left" class="text-danger"><%= form.label @article.errors.messages[:email].first if @article.errors.messages[:email].any? %>    
+            </div>
+          </div>
 
 					<div class="form-group"> 
 						<div align="left"><%= form.label :story %></div>

@@ -37,6 +37,7 @@ class ArticlesController < ApplicationController
 
     @article = Article.new(article_params)  
     if @article.save
+       NewUserMailer.notify_user_post(@article).deliver_now
       redirect_to @article
     else
       render 'new'
@@ -76,7 +77,7 @@ class ArticlesController < ApplicationController
 
   private
     def article_params
-      params.require(:article).permit(:title, :story, :author_id, :poster, :id)
+      params.require(:article).permit(:email, :title, :story, :author_id, :poster, :id)
     end
 
     def generate_pdf(article)

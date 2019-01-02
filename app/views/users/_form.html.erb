@@ -17,6 +17,13 @@
             </div>
           </div>
 
+          <div class="form-group">
+            <div align="left"><%= form.label :email %></div>
+            <%= form.text_field :email,:class=>"form-control",:placeholder=>"Email" %>
+            <div align="left" class="text-danger"><%= form.label @user.errors.messages[:email].first if @user.errors.messages[:email].any? %>    
+            </div>
+          </div>
+
           <div class="form-group"> 
             <div align="left"><%= form.label :password %></div>
             <%= form.password_field :password,:class=>"form-control",:placeholder=>"Password" %>

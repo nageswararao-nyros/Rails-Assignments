@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get 'comments/index'
   root 'sessions#create'
 
-  get 'admin' => 'admin#index'
+  
   get 'logout' => 'sessions#destroy'
   get '/profile'=> 'users#index'
 
@@ -22,6 +22,9 @@ Rails.application.routes.draw do
 
   get "search/index"
   post "search/index"
+
+  resources :admins
+  get 'notify' => "admins#notify"
 
   resources :authors
   # resources :articles
