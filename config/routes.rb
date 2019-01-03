@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   get 'signup'=>'users#new'
   get "sessions/create"
   get "sessions/destroy"
+  get 'forgot_password' => "users#forgot_password"
 
   get "articles/download_file"
   get "articles/download_pdf"

@@ -3,6 +3,10 @@ class SessionsController < ApplicationController
   def new
   end
 
+  def forgot_password
+    redirect_to forgot_password_users_path
+  end
+
   def create
     user = User.find_by(name: params[:name])
     if user and user.authenticate(params[:password])

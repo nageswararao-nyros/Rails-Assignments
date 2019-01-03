@@ -28,9 +28,10 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
 
     respond_to do |format|
+
       if @user.save
         
-        NewUserMailer.notify_user_signup(@user).deliver_now
+        MailSenderJob.set(wait: 30.seconds).perform_later @user
 
         format.html { redirect_to articles_url, notice: 'User was successfully created.' }
         format.json { render :show, status: :created, location: @user }
