@@ -1,28 +1,17 @@
 Rails.application.routes.draw do
-
-  get 'publishers/index'
-  get 'comments/index'
-  root 'sessions#create'
-
   
-  get 'logout' => 'sessions#destroy'
-  get '/profile'=> 'users#index'
+  devise_for :users
 
-  controller :sessions do
-    get  'login' => :new
-    post 'login' => :create
-    delete 'logout' => :destroy
-  end
-  get 'signup'=>'users#new'
-  get "sessions/create"
-  get "sessions/destroy"
-  get 'forgot_password' => "users#forgot_password"
+  resources :articles
+  root 'articles#index'
+  
+  
 
   get "articles/download_file"
   get "articles/download_pdf"
 
-  get "search/index"
-  post "search/index"
+  # get "search/index"
+  # post "search/index"
 
   resources :admins
   get 'notify' => "admins#notify"
@@ -30,8 +19,7 @@ Rails.application.routes.draw do
   resources :authors
   # resources :articles
   # resources :comments
-  resources :users
-  root 'users#new'
+  
 
   resources :articles do
     resources :comments
